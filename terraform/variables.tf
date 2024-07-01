@@ -30,7 +30,7 @@ variable "node_count" {
 
 variable "node_type" {
     type = string
-    description = "VM type for node pool. Minimum specs 2vcpu/4gb mem. Default here is the most economical found (~25/mo).
+    description = "VM type for node pool. Minimum specs 2vcpu/4gb mem. Default here is the most economical found (~25/mo)."
     default = "Standard_B2pls_v2"
 }
 

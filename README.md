@@ -13,3 +13,4 @@ az login
 * https://github.com/Azure/terraform/tree/master/quickstart
 * https://www.geeksforgeeks.org/azure-vpc-using-terraform/
 * https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-terraform?tabs=azure-cli
+* https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-terraform?pivots=development-environment-azure-cli
