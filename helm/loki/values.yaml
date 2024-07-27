@@ -1,5 +1,7 @@
 deploymentMode: SingleBinary
 loki:
+  limits_config:
+    retention_period: 7d
   auth_enabled: false # Disable auth - It's not really auth, it's just useful for multi-tenant deployments of Loki.
   commonConfig:
     replication_factor: 1
@@ -11,13 +13,16 @@ loki:
       store: tsdb
       index:
         prefix: loki_index_
-        period: 6h
+        period: 24h
       object_store: filesystem # we're storing on filesystem so there's no real persistence here.
       schema: v13
 chunksCache: # This deploys memcached which by default requests 10Gi of memory.
   enabled: false
 singleBinary:
   replicas: 1 # This value cannot exceed 1 if object_store is filesystem.
+  persistence:
+    size: 20Gi
+    storageClass: null
 read:
   replicas: 0
 backend:
